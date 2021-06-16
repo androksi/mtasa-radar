@@ -251,3 +251,4 @@ function toggleRadar(bool)
         destroyFonts()
     end
 end
+toggleRadar(true)

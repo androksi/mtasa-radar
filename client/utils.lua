@@ -13,6 +13,7 @@ function isCursorInZone(x, y, width, height)
     return false
 end
 
+-- Source: https://wiki.multitheftauto.com/wiki/RoundedRectangle - Thank you, d3vs!
 function dxDrawRoundedRectangle(x, y, width, height, radius, color, postGUI, subPixelPositioning)
     dxDrawRectangle(x+radius, y+radius, width-(radius*2), height-(radius*2), color, postGUI, subPixelPositioning)
     dxDrawCircle(x+radius, y+radius, radius, 180, 270, color, color, 16, 1, postGUI)
