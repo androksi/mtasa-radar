@@ -60,7 +60,6 @@ function destroyFonts()
     end
 end
 
-
 function renderRadar()
     dxDrawRoundedRectangle(radarX, radarY, radarSize, radarSize, 4, tocolor(20, 21, 22, 200 * radarOpacity), false, false)
 
@@ -251,5 +250,4 @@ function toggleRadar(bool)
         destroyFonts()
     end
 end
-
 toggleRadar(true)
