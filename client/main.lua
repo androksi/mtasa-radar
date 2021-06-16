@@ -90,15 +90,15 @@ function renderRadar()
                 for i = 1, #blips do
                     local blip = blips[i]
                     local blipId = getBlipIcon(blip)
-					if blidId ~= 0 then
-						local blipX, blipY, blipZ = getElementPosition(blip)
-						local bpX = (blipX + 3000) / 6000
-						local bpY = (3000 - blipY) / 6000
+		    if blidId ~= 0 then
+			local blipX, blipY, blipZ = getElementPosition(blip)
+			local bpX = (blipX + 3000) / 6000
+			local bpY = (3000 - blipY) / 6000
 						
-						if fileExists("assets/images/blips/" .. blipId .. ".png") then
-							dxDrawImage(-((mapX * 6000) - centerWidth) + bpX * 6000 - 12, -((mapY * 6000) - centerWidth) + bpY * 6000 - 12, 24, 24, "assets/images/blips/" .. blipId .. ".png", 0, 0, 0, tocolor(255, 255, 255, 255 * radarOpacity))
-						end
-					end
+			if fileExists("assets/images/blips/" .. blipId .. ".png") then
+			    dxDrawImage(-((mapX * 6000) - centerWidth) + bpX * 6000 - 12, -((mapY * 6000) - centerWidth) + bpY * 6000 - 12, 24, 24, "assets/images/blips/" .. blipId .. ".png", 0, 0, 0, tocolor(255, 255, 255, 255 * radarOpacity))
+			end
+		    end
                 end
             end
             dxDrawImage(locationX, locationY, locationSize, locationSize, locationImage, rotation + 180, 0, 0, tocolor(255, 255, 255, 255 * radarOpacity))
@@ -203,8 +203,8 @@ function dxClicks(button, state, absoluteX, absoluteY)
                     end
                 end
             end
-		end
-	end
+        end
+    end
 end
 
 function toggleMenu(bool)
